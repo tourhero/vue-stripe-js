@@ -51,13 +51,13 @@ export default defineComponent({
 
     onMounted(() => {
       const mountElement = () => {
+        mountPoint.value.appendChild(domElement.value)
         stripeElement.value = createElement(
           elements.value,
           type.value,
           options.value
         )
         stripeElement.value.mount(domElement.value)
-        mountPoint.value.appendChild(domElement.value)
       }
 
       // Handle event listeners
